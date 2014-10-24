@@ -13,13 +13,13 @@ function boton1() {
 }
 </script>
 </br></br>
-<img id="myImage" onclick="changeImage()" src="../imagenes/pic_bulboff.gif" width="100" height="180">
+<img id="imagen" onclick="cambiarimagen()" src="../imagenes/pic_bulboff.gif" width="100" height="180">
 
 <p>Click the light bulb to turn on/off the light.</p>
 
 <script>
-function changeImage() {
-    var image = document.getElementById('myImage');
+function cambiarimagen() {
+    var image = document.getElementById('imagen');
     if (image.src.match("bulbon")) {
         image.src = "../imagenes/pic_bulboff.gif";
     } else {
