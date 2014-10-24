@@ -2,6 +2,17 @@
 <html>
 <body>
 
+
+<p id="parrafo1" >HOLA MUNDO</p>
+
+<button type="button" onclick="boton1()">texto boton</button>
+
+<script>
+function boton1() { 
+    document.getElementById("parrafo1").innerHTML = "hola cambiaste el texto usando javascript";
+}
+</script>
+</br></br>
 <img id="myImage" onclick="changeImage()" src="../imagenes/pic_bulboff.gif" width="100" height="180">
 
 <p>Click the light bulb to turn on/off the light.</p>
