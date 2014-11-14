@@ -1,8 +1,38 @@
 <!--http://www.w3schools.com/js/js_whereto.asp->
 <!--javascript donde-->
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!--javascript en el head-->
 <script>
-function myFunction() {
-    document.getElementById("demostracion").innerHTML = "El codigo de javascript esta entre diamantes de script";
+function funcion1() {
+    document.getElementById("demostracion").innerHTML = " Parrafo cambiado desde head.";
 }
 </script>
+</head>
+
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demostracion">A Paragraph.</p>
+    <!--javascript en el head-->
+<button type="boton1" onclick="funcion1()">Prueba</button>
+
+    <!--javascript en el body-->
+<button type="botton2" onclick="funcion2()">Prueba2</button>
+
+<script>
+function funcion2() {
+    document.getElementById("demostracion").innerHTML = " Parrafo cambiado desde body.";
+}
+</script>
+
+<button type="boton3" onclick="funcion3()">Prueba3</button>
+
+<script src="myScript.js"></script>
+
+</body>
+</html> 
