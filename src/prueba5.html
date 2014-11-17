@@ -90,5 +90,28 @@ var	            Declares a variable
 while	        Marks a block of statements to be executed, while a condition is true
 -->
 
+<!--saltos de linea en javascript-->
+<p>
+The best place to break a code line is after an operator or a comma.
+</p>
+
+<p id="demostracion11"></p>
+<p id="demostracion12"></p>
+<p id="demostracion13"></p>
+
+<script>
+//salto de linea despues de =
+document.getElementById("demostracion11").innerHTML =
+    "Prueba de salto de linea.";
+//salto de linea separando un string con \ y continuando en la siguinte linea    
+document.getElementById("demostracion12").innerHTML = "Prueba de \
+    salto de linea 2.";
+</script>    
+<script>
+//no se pude usar \ para separar codigo javascript
+document.getElementById("demostracion13").innerHTML = \
+    "Prueba de salto de linea3.";
+</script>
+
 </body>
 </html>
