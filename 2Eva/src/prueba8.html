@@ -70,6 +70,34 @@
     </script>
     <p id="demostracion4"></p>    
     <script>
+        //comprovacion del tipo de dato
+        typeof "John"                // Returns string 
+        typeof 3.14                  // Returns number
+        typeof false                 // Returns boolean
+        typeof [1,2,3,4]             // Returns object
+        typeof {name:'John', age:34} // Returns object
         
+        document.getElementById("demostracion4").innerHTML = 
+        typeof "john" + "<br>" + 
+        typeof 3.14 + "<br>" +
+        typeof false + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof {name:'john', age:34};
+    </script>
+    <p id="demostracion5"></p>  
+    <script>
+        //variable indefinida 
+        var person;
+        document.getElementById("demostracion5").innerHTML =
+        person + "<br>" + typeof person;   //undefined undefined  
+    </script>
+    <p id="demostracion6"></p>  
+    <script>
+        //variable vacia 
+        var car = ""; //se inicializa la varible como string sin valor
+        document.getElementById("demostracion6").innerHTML =
+        "The value is: " +
+        car + "<br>" +
+        "The type is:" + typeof car; 
     </script>
 </html>
