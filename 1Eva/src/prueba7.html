@@ -1,0 +1,88 @@
+<!-- http://www.w3schools.com/js/js_variables.asp  -->
+<!--javascript variables-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demostracion1"></p>
+<p id="demostracion2"></p>
+<p id="demostracion3"></p>
+
+<!--variables para guardar informacion-->
+<script>
+var x = 5;
+var y = 6;
+//expresiones como en algebra
+document.getElementById("demostracion1").innerHTML = x + y;
+document.getElementById("demostracion2").innerHTML = x;
+
+/*
+The general rules for constructing a names for variables (unique identifiers) are:
+
+Names must begin with a letter
+Names can also begin with $ and _ (but we will not use it)
+Names can contain letters, digits, underscores, and dollar signs.
+Names are case sensitive (y and Y are different variables)
+Reserved words (like JavaScript keywords) cannot be used as names
+*/
+// = se usa para asignar no como igual a 
+
+//diferentes tipos de varibles
+
+var pi = 3.14; //numero
+var person = "John Doe"; //string
+var answer = 'Yes I am!'; //string
+
+//creacion de una variable
+
+var carName;
+carName = "Volvo";
+
+// lo mismo pero en una linea
+var carName2 = "Volvo";
+
+document.getElementById("demostracion3").innerHTML = carName2;
+
+//creacion de varias variables en una linea
+//var lastName = "Doe", age = 30, job = "carpenter";
+
+//y en varias
+/*
+var lastName = "Doe",
+age = 30,
+job = "carpenter";
+*/
+
+//mal porque al acabar la sentencia no se crean las otras variables
+//var lastName = "Doe"; age = 30; job = "carpenter";
+
+//bien
+//var lastName = "Doe"; var age = 30; var job = "carpenter";
+
+
+//al redeclarar la variable esta no pierde su valor
+
+var carName3 = "Volvo"; 
+var carName3;
+
+//todas las varibles deben se identificador por nombres unicos 
+//que se llaman identificadores
+
+</script>
+
+<button onclick="funcion1()">prueba</button>
+
+<p id="demostracion_boton"></p>
+
+<script>
+function funcion1() {
+    //string
+    var y = "5";
+    //string + numero = string concatenacion
+    document.getElementById("demostracion_boton").innerHTML = y + 2;
+}
+</script>
+
+</body>
+</html>
