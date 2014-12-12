@@ -1,3 +1,50 @@
 <!-- http://www.w3schools.com/js/js_functions.asp  -->
 <!--javascript Funciones-->
+<!DOCTYPE html>
+<html>
+<body>
 
+<p>Ejemplo de uso de funcion que calcula la multiplicacion de 2 numeros y devuelve el valor:</p>
+
+<p id="demo_funcion"></p><!--12-->
+
+<script>
+function f_multi(a, b) { // function nombre (parametro1, parametro2...){codigo a ejecutar}
+    return a * b; //cuando la funcion llega a return se termina la ejecucion
+}
+document.getElementById("demo_funcion").innerHTML = f_multi(4, 3);
+</script>
+
+
+<input type="textarea" name="num1"/>
+*
+<input type="textarea" name="num2"/>
+<button type="button" onclick="boton1()">multiplicate</button>
+<p id="demo_funcion2">resultado</p>
+
+<script>
+function f_multi2(a, b) { 
+    return a * b; 
+}
+
+function boton1()
+{ 
+    var x = parseInt(document.getElementById("num1").innerHTML);
+    var y = parseInt(document.getElementById("num2").innerHTML);
+    var z = f_multi2(x, y);
+    document.getElementById("demo_funcion2").innerHTML = x+" * "+y+" = "+z;
+}
+</script>
+
+
+<p id="demo_funcion3"></p>
+
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo_funcion3").innerHTML = toCelsius(68);
+</script>
+
+</body>
+</html>
