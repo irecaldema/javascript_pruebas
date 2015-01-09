@@ -1,0 +1,70 @@
+<!-- http://www.w3schools.com/js/js_objects.asp  -->
+<!--javascript Objetos-->
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>creando una variable JavaScript.</p>
+
+        <p id="demostracion1"></p>
+        
+        <script>
+            var coche = "Ferrari";
+            document.getElementById("demostracion1").innerHTML = coche;
+        </script>
+    
+        <p id="demostracion2"></p>
+    
+        <script>
+            var coche2 = {tipo:"Toyota", modelo:500, color:"rojo"};
+            document.getElementById("demostracion2").innerHTML = "tipo: "+coche2.tipo+" modelo: "+coche2.modelo+" color: "+coche2.color+"";
+        </script>
+    
+        <p id="demostracion3"></p>
+    
+        <script>
+            //los salto de linea y espacios no varian la creacion del objeto
+            var coche3 = {
+                tipo:"Honda" , 
+                modelo : 222, 
+                 color:"azul"
+            };
+            
+            document.getElementById("demostracion3").innerHTML = "tipo: "+coche3.tipo+" modelo: "+coche3.modelo+" color: "+coche3.color+"";
+        </script>
+        
+        <p id="demostracion4"></p>
+    
+        <script>
+            //los salto de linea y espacios no varian la creacion del objeto
+            var coche4 = {
+                tipo:"Sega" , 
+                modelo : 252, 
+                 color:"verde"
+            };
+            //1º pmanera de acceder a las propiedades de un objeto objeto.propiedad
+                //document.getElementById("demostracion4").innerHTML = "tipo: "+coche4.tipo+" modelo: "+coche4.modelo+" color: "+coche4.color+"";
+            //2º pmanera de acceder a las propiedades de un objeto objeto["propiedad"]
+                document.getElementById("demostracion4").innerHTML = "tipo: "+coche4["tipo"]+" modelo: "+coche4["modelo"]+" color: "+coche4["color"]+"";
+        </script>
+        
+        <p>Creando y usando un metodo de objeto.</p>
+
+        <p>Un metodo de objeto es una definicion de una funcion, guardada como una propiedad.</p>
+        
+        <p id="demostracion5"></p>
+        
+        <script>
+        var persona = {
+            nombre: "Aitor",
+            apellido : "Alatriste",
+            dni       : "42844296B",
+            nombre_completo : function() {
+               return this.nombre + " " + this.apellido;
+            }
+        };
+        
+        document.getElementById("demostracion5").innerHTML = "nombre completo: "+persona.nombre_completo()+" dni: "+persona.dni;
+        </script>
+    
+    </body>
+</html>    
