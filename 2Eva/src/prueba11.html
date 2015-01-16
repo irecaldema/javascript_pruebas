@@ -68,6 +68,44 @@
             }
         </script>
         
+        <!--
+            
+            VIDA DE LAS VARIABLES
+            
+            The lifetime of a JavaScript variable starts when it is declared.
+            
+            Local variables are deleted when the function is completed.
+            
+            Global variables are deleted when you close the page.
+        -->
+        <!--
+            Function Arguments
+            Function arguments (parameters) work as local variables inside functions.
+        -->
+        
+        <!--
+            Global Variables in HTML
+            With JavaScript, the global scope is the complete JavaScript environment.
+            In HTML, the global scope is the window object: All global variables belong to the window object.
+        -->        
+        
+        <p>
+            In HTML, all global variables will become a window variables.
+        </p>
+            
+        <p id="demo4"></p>
+            
+        <script>
+            myFunction();
+            document.getElementById("demo4").innerHTML =
+            "I can display " + window.carName;
+            
+            function myFunction() {
+                carName = "Volvo";
+            }
+        </script>
+        
+        
         
         
     </body>
