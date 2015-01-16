@@ -3,6 +3,72 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <<!--In JavaScript, scope is the set of variables, objects, and functions you have access to.
+        JavaScript has function scope: The scope changes inside functions.
+        
+        Variables declared within a JavaScript function, become LOCAL to the function.
+        Local variables have local scope: They can only be accessed within the function.
+        
+        // code here can not use carName
+
+        function myFunction() {
+        var carName = "Volvo";
+
+        // code here can use carName
+        }-->
+        
+        <p>A local variable can only be accessed from within the function where it was declared.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            myFunction();
+            document.getElementById("demo").innerHTML = "I can display " + typeof carName; //tipo = indefinido no esta declarado en el ambito
+        
+            function myFunction() {
+                var carName = "Volvo"; //de ambito local
+            }
+        </script>
+        
+        <!--A variable declared outside a function, becomes GLOBAL.
+        A global variable has global scope: All scripts and functions on a web page can access it. -->
+        
+        <p>A GLOBAL variable can be accessed from any script or function.</p>
+
+        <p id="demo2"></p>
+        
+        <script>
+            var carName = "Volvo"; //de ambito global
+            myFunction();
+            
+            function myFunction() {
+                document.getElementById("demo2").innerHTML = "I can display " + carName;
+            }
+        </script>
+        
+        
+        <!--If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+        This code example will declare carName as a global variable, even if it is executed inside a function.-->
+        
+        
+        <p>
+            If you assign a value to a variable that has not been declared,
+            it will automatically become a GLOBAL variable:
+        </p>
+        
+        <p id="demo3"></p>
+        
+        <script>
+            myFunction();
+            document.getElementById("demo3").innerHTML =
+            "I can display " + carName;
+            
+            function myFunction() {
+                carName = "Volvo"; //variable no declarada se convierte en global al recibir un valor
+            }
+        </script>
+        
+        
         
     </body>
 </html>    
