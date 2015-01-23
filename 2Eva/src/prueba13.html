@@ -22,6 +22,43 @@
         document.getElementById("demo1").innerHTML = carName1 + "</br>" + carName2; 
         </script>
        
+       <!--
+            comillas visibles:
+           
+            You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+       
+            var answer = "It's alright";
+            var answer = "He is called 'Johnny'";
+            var answer = 'He is called "Johnny"';
+       -->
+       
+        <p id="demo2"></p>
+
+        <script>
+        var carName1 = "Volvo 'XC60'";//se veran las comillas
+        var carName2 = 'Volvo "XC60"';//ya que no son las que delimitan el string
+        
+        document.getElementById("demo2").innerHTML = carName1 + "</br>" + carName2; 
+        </script>
+    
+        <!--
+        
+        String Length
+        The length of a string is found in the built in property length:
+        
+        Example
+        
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var sln = txt.length;
+        
+        -->
+       
+        <p id="demo3"></p>
+
+        <script>
+        var texto="Buena-suerte-en-la-recuperacion.";
+        document.getElementById("demo3").innerHTML = texto.length;//32
+        </script>
        
        
     </body>
