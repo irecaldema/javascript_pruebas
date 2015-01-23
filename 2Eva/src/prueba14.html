@@ -4,7 +4,112 @@
 <html>
     <body>
         <!--
+            BUSQUEDAS
+            Finding a String in a String
+            
+            Cuenta cada caractere hasta el inicio del string que se busca.
+            
+            The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+            
+            Example:
+            var str = "Please locate where 'locate' occurs!";
+            var pos = str.indexOf("locate");
+        -->
+        
+        <p id="p1">moto coche coche coche.</p>
 
+        <button onclick="buscador()">Try it</button>
+        
+        <p id="demo1">Resulatdo de la busqueda</p>
+        
+        <script>
+            function buscador() {
+                var zona_busqueda = document.getElementById("p1").innerHTML;
+                var posicion = zona_busqueda.indexOf("coche");
+                document.getElementById("demo1").innerHTML = posicion;//5
+            }
+        </script>
+        
+        <!--
+            Cuenta los caracteres hasta la ultima vez que se escribio un String.
+            The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+    
+            Example
+            
+            var str = "Please locate where 'locate' occurs!";
+            var pos = str.lastIndexOf("locate");
+        
+        -->
+        
+        <p id="p2">coche coche coche coche</p>
+
+        <button onclick="buscador2()">Try it</button>
+        
+        <p id="demo2">Resultado buesqueda 2</p>
+        
+        <script>
+            function buscador2() {
+                var zona_busqueda = document.getElementById("p2").innerHTML;
+                var posicion = zona_busqueda.lastIndexOf("coche");
+                document.getElementById("demo2").innerHTML = posicion;//18
+            }
+        </script>
+        
+        <!--
+        
+            Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+            
+            Note	JavaScript counts positions from zero.
+            0 is the first position in a string, 1 is the second, 2 is the third ...
+            
+            Both methods accept a second parameter as the starting position for the search.
+                    
+        -->
+        <!--
+        
+            Searching for a String in a String
+            
+            The search() method searches a string for a specified value and returns the position of the match:
+            
+            Example
+            
+            var str = "Please locate where 'locate' occurs!";
+            var pos = str.search("locate");
+                    
+        -->
+        
+        <p id="p3">Please locate where 'locate' occurs!.</p>
+        
+        <button onclick="buscador3()">Try it</button>
+        
+        <p id="demo3">Resultado busqueda 3</p>
+        
+        <script>
+            function buscador3() {
+                var zona_busqueda = document.getElementById("p3").innerHTML;
+                var posicion = zona_busqueda.search("locate");
+                document.getElementById("demo3").innerHTML = posicion;//7
+            }
+        </script>
+        
+        <!--
+        
+            ADVERTENCIA
+            Did You Notice?
+            The two methods, indexOf() and search(), are equal.
+            
+            They accept the same arguments (parameters), and they return the same value.
+            
+            The two methods are equal, but the search() method can take much more powerful search values.
+            
+            You will learn more about powerful search values in the chapter about regular expressions.
+            
+            busquda de palabra que empieza por l
+            str.search("^l");
+            
+            mas expresiones regulares:
+            http://www.w3schools.com/jsref/jsref_obj_regexp.asp
+            
         -->
 
     </body>
