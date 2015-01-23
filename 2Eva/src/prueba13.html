@@ -60,6 +60,221 @@
         document.getElementById("demo3").innerHTML = texto.length;//32
         </script>
        
+        <!--
        
+            Special Characters
+            Because strings must be written within quotes, JavaScript will misunderstand this string:
+            
+             var y = "We are the so-called "Vikings" from the north."
+            The string will be chopped to "We are the so-called ".
+            
+            The solution to avoid this problem, is to use the \ escape character.
+            
+            The backslash escape character turns special characters into string characters:
+            
+            Example
+            
+            var x = 'It\'s alright';
+            var y = "We are the so-called \"Vikings\" from the north."
+       
+        -->
+       
+        <p id="demo4"></p>
+
+        <script>
+        var x = 'It\'s alright';    // el caractere \ antes del caracter reservado
+        var y = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo4").innerHTML = x + "<br>" + y; 
+        
+        </script>
+        
+        <!--
+            CARACTERES ESPECIALES PARA STRINGS
+        
+            The escape character (\) can also be used to insert other special characters in a string.
+
+            This is the lists of special characters that can be added to a text string with the backslash sign:
+            
+            Code	Outputs
+            \'	    single quote
+            \"	    double quote
+            \\	    backslash
+            \n	    new line
+            \r	    carriage return
+            \t	    tab
+            \b	    backspace
+            \f	    form feed
+        
+        -->
+        
+        <!--
+        
+            Breaking Long Code Lines
+            
+            For best readability, programmers often like to avoid code lines longer than 80 characters.
+            If a JavaScript statement does not fit on one line, the best place to break it, is after an operator:
+            
+            Example
+
+            document.getElementById("demo").innerHTML =
+            "Hello Dolly.";
+        -->
+        
+        <p>
+        The best place to break a code line is after an operator or a comma.
+        </p>
+        
+        <p id="demo5"></p>
+        
+        <script>
+        document.getElementById("demo5").innerHTML = 
+        "Hello Dolly.";
+        </script>
+       
+       
+        <!--
+        
+            You can also break up a code line within a text string with a single backslash:
+
+            Example
+            
+            document.getElementById("demo").innerHTML = "Hello \
+            Dolly!";
+            
+        -->
+        
+        <p id="demo6"></p>
+        
+        <script>
+        document.getElementById("demo6").innerHTML = "Hello \
+        Dolly.";
+        </script>
+        
+        
+        <!--
+        
+            ADVERTENCIA
+            However, you cannot break up a code line with a backslash:
+    
+            Example
+            
+            document.getElementById("demo").innerHTML = \ 
+            "Hello Dolly!";
+            
+        -->    
+            
+        
+        <!--
+            Strings Can be Objects
+            Normally, JavaScript strings are primitive values, created from literals: var firstName = "John"
+            
+            But strings can also be defined as objects with the keyword new: var firstName = new String("John")
+            
+            Example
+            
+            var x = "John";
+            var y = new String("John");
+            
+            // type of x will return String
+            // type of y will return Object
+        -->
+        
+        <p id="demo6"></p>
+
+        <script>
+        var x = "John";              // x is a string
+        var y = new String("John");  // y is an object
+        
+        document.getElementById("demo7").innerHTML =
+        typeof x + " " + typeof y;
+        </script>
+        
+        <!--
+            ADVERTENCIA DE STRING COMO OBJETO
+            Don't create strings as objects. It slows down execution speed, and produces nasty side effects:
+            
+            When using the == equality operator, equal strings looks equal:
+            
+            Example
+            
+            var x = "John";             
+            var y = new String("John");
+            
+            // (x == y) is true because x and y have equal values
+
+        -->
+        
+        <p id="demo7"></p>
+
+        <script>
+        var x = "John";              // x is a string
+        var y = new String("John");  // y is an object
+        document.getElementById("demo7").innerHTML = x==y; //true mismo valor
+        </script>
+        
+        </body>
+        
+        <!--
+            COMPARACION DE VALOR Y TIPO DE VARIABLES
+            
+            When using the === equality operator, equal strings are not equal:
+    
+            Example
+            
+            var x = "John";             
+            var y = new String("John");
+            
+            // (x === y) is false because x and y have different types
+            
+        -->
+        
+        <p id="demo8"></p>
+        
+        <script>
+        var x = "John";              // x is a string
+        var y = new String("John");  // y is an object
+        document.getElementById("demo8").innerHTML = x===y;//false
+        </script>
+        
+        <!--
+            String Properties and Methods
+            Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+            But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+            
+            String methods are covered in next chapter.
+            
+            String Properties
+            
+            Property	    Description
+            constructor     Returns the function that created the String object's prototype
+            length	        Returns the length of a string
+            prototype	    Allows you to add properties and methods to an object
+            
+            String Methods
+            
+            Method	            Description
+            charAt()	        Returns the character at the specified index (position)
+            charCodeAt()	    Returns the Unicode of the character at the specified index
+            concat()	        Joins two or more strings, and returns a copy of the joined strings
+            fromCharCode()	    Converts Unicode values to characters
+            indexOf()	        Returns the position of the first found occurrence of a specified value in a string
+            lastIndexOf()	    Returns the position of the last found occurrence of a specified value in a string
+            localeCompare()	    Compares two strings in the current locale
+            match()	            Searches a string for a match against a regular expression, and returns the matches
+            replace()	        Searches a string for a value and returns a new string with the value replaced
+            search()	        Searches a string for a value and returns the position of the match
+            slice()	            Extracts a part of a string and returns a new string
+            split()	            Splits a string into an array of substrings
+            substr()	        Extracts a part of a string from a start position through a number of characters
+            substring()	        Extracts a part of a string between two specified positions
+            toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
+            toLocaleUpperCase()	Converts a string to uppercase letters, according to the host's locale
+            toLowerCase()	    Converts a string to lowercase letters
+            toString()	        Returns the value of a String object
+            toUpperCase()	    Converts a string to uppercase letters
+            trim()	            Removes whitespace from both ends of a string
+            valueOf()	        Returns the primitive value of a String object
+        -->        
     </body>
 </html>    
