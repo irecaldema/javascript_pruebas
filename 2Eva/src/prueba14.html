@@ -111,6 +111,97 @@
             http://www.w3schools.com/jsref/jsref_obj_regexp.asp
             
         -->
+        <!--
+        
+            Extracting String Parts
+            
+                There are 3 methods for extracting a part of a string:
+                
+                slice(start, end)
+                substring(start, end)
+                substr(start, length)
+        
+        -->
+        
+        <!--
+                The slice() Method
+                
+                    slice() extracts a part of a string and returns the extracted part in a new string.
+                    
+                    The method takes 2 parameters: the starting index (position), and the ending index (position).
+                    
+                    This example slices out a portion of a string from position 7 to position 13:
+                    
+                    Example
+                    
+                        var str = "Apple, Banana, Kiwi";
+                        var res = str.slice(7,13);
+                        The result of res will be:
+                        
+                        Banana
+        -->  
+        
+        <p>
+            The slice() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo4"></p>
+        
+        <script>
+            var str = "Apple, Banana, Kiwi";
+            document.getElementById("demo4").innerHTML = str.slice(7,13); //inicio 7 final 13 desde la B hasta la a final
+        </script>
+        
+        <!--
+        
+            If a parameter is negative, the position is counted from the end of the string.
+            
+            This example slices out a portion of a string from position -12 to position -6:
+            
+            Example
+            
+                var str = "Apple, Banana, Kiwi";
+                var res = str.slice(-12,-6);
+                The result of res will be:
+                
+                Banana  
+        
+        -->
+
+        <p>
+            The slice() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo5"></p>
+        
+        <script>
+            var str = "Apple, Banana, Kiwi";
+            document.getElementById("demo5").innerHTML = str.slice(-12,-6); //inicio: 12 desde el final  final: hasta 6 desde el final
+        </script>  
+        
+        <!--
+        
+            If you omit the second parameter, the method will slice out the rest of the string:
+    
+            Example
+            
+                var res = str.slice(7);
+        
+        -->
+        
+        <p>
+            The slice() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo6"></p>
+        
+        <script>
+            var str = "Apple, Banana, Kiwi";
+            document.getElementById("demo").innerHTML = str.slice(7); //desde la posicion 7 hasta el final del string
+        </script>
 
     </body>
 </html>    
