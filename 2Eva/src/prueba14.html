@@ -276,6 +276,17 @@
                 Banana        
                 
         -->
+        
+        <!--
+        
+        If the first parameter is negative, the position counts from the end of the string.
+
+        The second parameter can not be negative, because it defines the length.
+        
+        If you omit the second parameter, substr() will slice out the rest of the string.
+        
+        -->
+        
 
         <p>
             The substr() method extract a part of a string
@@ -286,7 +297,7 @@
         
         <script>
             var str = "Apple, Banana, Kiwi";
-            document.getElementById("demo9").innerHTML = str.substr(7,6);//desde el 7 6 caracteres mas
+            document.getElementById("demo9").innerHTML = str.substr(-4,2);//desde el 7 2 caracteres mas ki
         </script>        
         
 
