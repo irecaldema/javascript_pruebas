@@ -202,7 +202,7 @@
         
         <script>
             var str = "Apple, Banana, Kiwi";
-            document.getElementById("demo").innerHTML = str.slice(7); 
+            document.getElementById("demo6").innerHTML = str.slice(7); 
             //desde la posicion 7 hasta el final del string
         </script>
     
@@ -238,7 +238,7 @@
             
                 substring() is similar to slice().
                 
-                The difference is that substring() cannot accept negative indexes.
+            !!  The difference is that substring() cannot accept negative indexes. !!
                 
                 Example
                 
@@ -260,7 +260,35 @@
         <script>
             var str = "Apple, Banana, Kiwi";
             document.getElementById("demo8").innerHTML = str.substring(7,13);
+            //If you omit the second parameter, substring() will slice out the rest of the string.
         </script>
+        
+        <!--
+        
+            substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.
+            
+            Example
+            
+                var str = "Apple, Banana, Kiwi";
+                var res = str.substr(7,6);
+                The result of res will be:
+                
+                Banana        
+                
+        -->
+
+        <p>
+            The substr() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo9"></p>
+        
+        <script>
+            var str = "Apple, Banana, Kiwi";
+            document.getElementById("demo9").innerHTML = str.substr(7,6);//desde el 7 6 caracteres mas
+        </script>        
+        
 
     </body>
 </html>    
