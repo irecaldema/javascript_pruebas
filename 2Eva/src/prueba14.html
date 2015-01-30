@@ -418,6 +418,64 @@
             Formally said: Strings are immutable: Strings cannot be changed, only replaced.     
         
         -->
+        
+        <!--
+        
+            Extracting String Characters
+            
+                There are 2 safe methods for extracting string characters:
+                
+                    charAt(position)
+                    charCodeAt(position)
+        
+        -->
+        
+        <!--
+        
+        The charAt() Method
+        
+            The charAt() method returns the character at a specified index (position) in a string:
+            
+            Example
+            
+                var str = "HELLO WORLD";
+                str.charAt(0);            // returns H        
+        
+        -->
+        
+        <p>The charAt() method returns the character at a given position in a string:</p>
+
+        <p id="demo14"></p>
+        
+        <script>
+            var str = "HELLO WORLD";
+            document.getElementById("demo14").innerHTML = str.charAt(0);
+            // La caractere en la posicion 0 es H
+        </script>
+        
+        <!--
+        
+            The charCodeAt() Method
+            
+                The charCodeAt() method returns the unicode of the character at a specified index in a string:
+                
+                    Example
+                    
+                    var str = "HELLO WORLD";
+                    
+                    str.charCodeAt(0);         //	returns 72        
+        
+        -->
+        
+            <p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+            
+            <p id="demo15"></p>
+            
+            <script>
+                var str = "HELLO WORLD";
+                document.getElementById("demo15").innerHTML = str.charCodeAt(0);
+                // el codigo de H mauscula es 72
+            </script>        
 
     </body>
 </html>    
