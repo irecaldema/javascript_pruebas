@@ -150,7 +150,8 @@
         
         <script>
             var str = "Apple, Banana, Kiwi";
-            document.getElementById("demo4").innerHTML = str.slice(7,13); //inicio 7 final 13 desde la B hasta la a final
+            document.getElementById("demo4").innerHTML = str.slice(7,13); 
+            //inicio 7 final 13 desde la B hasta la a final
         </script>
         
         <!--
@@ -178,7 +179,8 @@
         
         <script>
             var str = "Apple, Banana, Kiwi";
-            document.getElementById("demo5").innerHTML = str.slice(-12,-6); //inicio: 12 desde el final  final: hasta 6 desde el final
+            document.getElementById("demo5").innerHTML = str.slice(-12,-6); 
+            //inicio: 12 desde el final  final: hasta 6 desde el final
         </script>  
         
         <!--
@@ -200,7 +202,64 @@
         
         <script>
             var str = "Apple, Banana, Kiwi";
-            document.getElementById("demo").innerHTML = str.slice(7); //desde la posicion 7 hasta el final del string
+            document.getElementById("demo").innerHTML = str.slice(7); 
+            //desde la posicion 7 hasta el final del string
+        </script>
+    
+        <!--
+        
+        or, counting from the end:
+
+        Example
+        
+            var res = str.slice(-12);
+        -->
+        
+        <p>
+            The slice() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo7"></p>
+        
+        <script>
+        var str = "Apple, Banana, Kiwi";
+        document.getElementById("demo7").innerHTML = str.slice(-12); 
+        //desde la posicion 12 contando desde el final hasta el final del string
+        </script>
+        
+        <!-- ADVERTENCIA
+            Las posiciones negativas no son compatibles con Internet Explorer 8 y anteriores.
+        -->    
+
+        <!--
+        
+            The substring() Method
+            
+                substring() is similar to slice().
+                
+                The difference is that substring() cannot accept negative indexes.
+                
+                Example
+                
+                    var str = "Apple, Banana, Kiwi";
+                    var res = str.substring(7,13);
+                    The result of res will be:
+                    
+                    Banana
+        
+        -->    
+        
+        <p>
+            The substr() method extract a part of a string
+            and returns the extracted parts in a new string:
+        </p>
+        
+        <p id="demo8"></p>
+        
+        <script>
+            var str = "Apple, Banana, Kiwi";
+            document.getElementById("demo8").innerHTML = str.substring(7,13);
         </script>
 
     </body>
