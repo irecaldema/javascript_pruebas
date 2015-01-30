@@ -301,6 +301,32 @@
             //desde el -4 2 caracteres mas resultado: ki
         </script>        
         
+        <!--
+        
+            Replacing String Content
+                The replace() method replaces a specified value with another value in a string:
+                
+                Example
+                
+                    str = "Please visit Microsoft!";
+                    var n = str.replace("Microsoft","W3Schools");        
+        -->
+        
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="aprobar()">Try it</button>
+        
+        <p>tu nota es de 4.9</p>
+        
+        <p id="demo10">suspendido!</p>
+        
+        <script>
+        function aprobar() {
+            var str = document.getElementById("demo10").innerHTML; 
+            var txt = str.replace("Microsoft","W3Schools");
+            document.getElementById("demo").innerHTML = txt;
+        }
+        </script>
 
     </body>
 </html>    
