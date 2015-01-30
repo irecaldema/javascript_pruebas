@@ -475,7 +475,27 @@
                 var str = "HELLO WORLD";
                 document.getElementById("demo15").innerHTML = str.charCodeAt(0);
                 // el codigo de H mauscula es 72
-            </script>        
+            </script>  
+            
+        <!--
+        
+            ADVERTENCIA
+        
+            Accessing a String as an Array is Unsafe
+            You might have seen code like this, accessing a string as an array:
+            
+            var str = "HELLO WORLD";
+            
+            str[0];                   // returns H
+            This is unsafe and unpredictable:
+            
+            It does not work in all browsers (not in IE5, IE6, IE7)
+            It makes strings look like arrays (but they are not)
+            str[0] = "H" does not give an error (but does not work)
+            If you want to read a string as an array, convert it to an array first.        
+        
+        -->
+            
 
     </body>
 </html>    
