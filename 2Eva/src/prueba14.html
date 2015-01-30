@@ -355,5 +355,53 @@
             }
         </script>
 
+        <!--
+
+            A string is converted to lower case with toLowerCase():
+            
+            Example
+            
+                var text1 = "Hello World!";       // String
+                var text2 = text1.toLowerCase();  // text2 is text1 converted to lower        
+        
+        -->
+
+        <p>Convert string to lower case:</p>
+        
+        <button onclick="descendiente()">Try it</button>
+        
+        <p id="demo12">Hello World!</p>
+        
+        <script>
+            function descendiente() {
+                var text = document.getElementById("demo12").innerHTML;
+                document.getElementById("demo12").innerHTML = text.toLowerCase();
+            }
+        </script>
+
+        <!--
+
+        The concat() Method
+        
+            concat() joins two or more strings:
+            
+            Example
+            
+                var text1 = "Hello";
+                var text2 = "World";
+                text3 = text1.concat("	",text2);
+        
+        -->
+        
+        <p>The concat() method joins two or more strings:</p>
+        
+        <p id="demo13"></p>
+        
+        <script>
+            var text1 = "Hello";
+            var text2 = "World!"
+            document.getElementById("demo13").innerHTML = text1.concat(" ",text2);
+        </script>        
+
     </body>
 </html>    
