@@ -401,7 +401,23 @@
             var text1 = "Hello";
             var text2 = "World!"
             document.getElementById("demo13").innerHTML = text1.concat(" ",text2);
-        </script>        
+        </script>     
+        <!--
+        
+            The concat() method can be used instead of the plus operator. 
+            
+            Example
+                These two lines do the same:
+                
+                var text = "Hello" + " " + "World!";
+                var text = "Hello".concat(" ","World!");
+            
+            ANOTACION LOS STRING NO SE MODIFICAN SE REEMPLAZAN
+                
+            All string methods return a new string. They don't modify the original string.
+            Formally said: Strings are immutable: Strings cannot be changed, only replaced.     
+        
+        -->
 
     </body>
 </html>    
