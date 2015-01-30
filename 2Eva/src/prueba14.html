@@ -312,20 +312,47 @@
                     var n = str.replace("Microsoft","W3Schools");        
         -->
         
-        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
-
-        <button onclick="aprobar()">Try it</button>
-        
         <p>tu nota es de 4.9</p>
         
         <p id="demo10">suspendido!</p>
         
+        <button onclick="aprobar()">Regalo inesperado (billete de 500€)</button>
+        
         <script>
-        function aprobar() {
-            var str = document.getElementById("demo10").innerHTML; 
-            var txt = str.replace("Microsoft","W3Schools");
-            document.getElementById("demo").innerHTML = txt;
-        }
+            function aprobar() {
+                var str = document.getElementById("demo10").innerHTML; 
+                var txt = str.replace("suspendido","aprobado");
+                document.getElementById("demo10").innerHTML = txt;
+            }
+        </script>
+        
+        <!-- ADVERRENCIA
+            The replace() method can also take a regular expression as the search value.
+        -->
+        
+        <!--
+            Converting to Upper and Lower Case
+            
+                A string is converted to upper case with toUpperCase():
+                
+                Example
+                
+                    var text1 = "Hello World!";       // String
+                    var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+
+        -->
+        
+        <p>Convert string to upper case:</p>
+
+        <button onclick="elevador()">Try it</button>
+        
+        <p id="demo11">Hello World!</p>
+        
+        <script>
+            function elevador() {
+                var text = document.getElementById("demo11").innerHTML;
+                document.getElementById("demo11").innerHTML = text.toUpperCase();
+            }
         </script>
 
     </body>
