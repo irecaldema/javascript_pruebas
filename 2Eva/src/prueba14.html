@@ -481,7 +481,7 @@
         
             ADVERTENCIA
         
-            Accessing a String as an Array is Unsafe
+            Accessing a String as an Array is Unsafe //impredecible
             You might have seen code like this, accessing a string as an array:
             
             var str = "HELLO WORLD";
@@ -495,7 +495,37 @@
             If you want to read a string as an array, convert it to an array first.        
         
         -->
+        
+        <!--
+        
+            Converting a String to an Array
+               
+            A string can be converted to an array with the split() method:
             
+            Example
+            
+                var txt = "a,b,c,d,e";   // String
+                txt.split(",");          // Split on commas
+                txt.split(" ");          // Split on spaces
+                txt.split("|");          // Split on pipe
+        -->
+        
+        <p>Click "Try it" to display array elements, after a string split.</p>
+
+        <button onclick="separador()">Try it</button>
+        
+        <p id="demo16"></p>
+        
+        <script>
+        function separador() {
+            var str = "a,b,c,d,e,f";
+            var arr = str.split(",");
+            for (var i=0; i<arr.length; i++){
+                document.getElementById("demo16").innerHTML =document.getElementById("demo16").innerHTML+" "+arr[i];
+            }
+        }
+        </script>
+
 
     </body>
 </html>    
