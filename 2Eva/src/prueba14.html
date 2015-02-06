@@ -517,15 +517,43 @@
         <p id="demo16"></p>
         
         <script>
-        function separador() {
-            var str = "a,b,c,d,e,f";
-            var arr = str.split(",");
-            for (var i=0; i<arr.length; i++){
-                document.getElementById("demo16").innerHTML =document.getElementById("demo16").innerHTML+" "+arr[i];
+            function separador() {
+                var str = "a,b,c,d,e,f";
+                var arr = str.split(",");
+                for (var i=0; i<arr.length; i++){
+                    //document.getElementById("demo16").innerHTML =document.getElementById("demo16").innerHTML+" "+arr[i];
+                    document.getElementById("demo16").innerHTML +=" "+arr[i];
+                }
             }
-        }
         </script>
+        
+        <!--
+        
+            If the separator is omitted, the returned array will contain the whole string in index [0].
+    
+            If the separator is "", the returned array will be an array of single characters:
+            
+            Example
+            
+                var txt = "Hello";       // String
+                txt.split("");           // Split in characters
+        
+        -->
+        
+        <p id="demo17"></p>
 
+        <script>
+            var str = "Hello";
+            var arr = str.split("");
+            var text = "";
+            var i;
+            for (i = 0; i < arr.length; i++) {
+                text += arr[i] + "</br>"
+            }
+            document.getElementById("demo17").innerHTML = text;
+        </script>
+        
+        <!-- mas sobre strings http://www.w3schools.com/jsref/jsref_obj_string.asp -->
 
     </body>
 </html>    
