@@ -172,6 +172,85 @@
             }
         </script>
 
+        <!--
+        
+        INFINITY
+        
+        Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+        
+        Example
+        
+            var myNumber = 2;
+                while (myNumber != Infinity) {          // Execute until Infinity
+                    myNumber = myNumber * myNumber;
+                }
+        
+        -->
+        
+        <p>Infinity is returned if you calculate a number outside the largest possible number.</p>
 
+        <button onclick="funcion6()">Try it</button>
+        
+        <p id="demo6"></p>
+        
+        <script>
+            function funcion6() {
+                var myNumber = 2; 
+                var txt = "";
+                while (myNumber != Infinity) { // hasta que la variable sea infinito
+                    myNumber = myNumber * myNumber;
+                    txt = txt + myNumber + "<br>";
+                }
+                document.getElementById("demo6").innerHTML = txt;
+            }
+        </script>
+
+        <!--
+        
+        Division by 0 (zero) also generates Infinity:
+
+        Example
+        
+        var x =  2 / 0;          // x will be Infinity
+        var y = -2 / 0;          // y will be -Infinity
+        
+        -->
+        
+        <p>Division by zero also generates Infinity.</p>
+        
+        <button onclick="funcion7()">Try it</button>
+        
+        <p id="demo7">resultado</p>
+        
+        <script>
+            function funcion7() {
+                var x = 2/0; //infinito
+                var y = -2/0; //-infinito
+                document.getElementById("demo7").innerHTML = x + "<br>" + y;
+            }
+        </script>
+        
+        <!--
+        
+        Infinity is a number: typeOf Infinity returns number.
+
+        Example
+        
+            typeof Infinity;        // returns "number"
+        
+        -->
+        
+        <p>Infinity is a Number.</p>
+
+        <button onclick="funcion8()">Try it</button>
+        
+        <p id="demo8">typeof Infinity</p>
+        
+        <script>
+        function funcion8() {
+            document.getElementById("demo8").innerHTML = typeof Infinity;
+        }
+        </script>
+    
     </body>
 </html>    
