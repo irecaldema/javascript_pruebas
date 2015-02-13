@@ -65,6 +65,122 @@
                (123).toString() + "<br>" +
                (100 + 23).toString(); 
         </script>
+        
+        <!--
+        The toExponential() Method
+        
+        toExponential() returns a string, with a number rounded and written using exponential notation.
+        
+        A parameter defines the number of character behind the decimal point:
+        
+        Example
+            var x = 9.656;
+            x.toExponential(2);     // returns 9.66e+0
+            x.toExponential(4);     // returns 9.6560e+0
+            x.toExponential(6);     // returns 9.656000e+0
+            
+        The parameter is optional. If you don't specify it, JavaScript will not round the number.    
+        -->
+        
+        <p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+
+        <p>An optional parameter defines the number of digits behind the decimal point.</p>
+        
+        <p id="demo2"></p>
+
+
+        
+        <script>
+        var x = 10500;
+        document.getElementById("demo2").innerHTML =
+            x.toExponential() + "<br>" +    //1.05e+4
+            x.toExponential(2) + "<br>" +   //1.05e+4
+            x.toExponential(4) + "<br>" +   //1.0500e+4
+            x.toExponential(6);             //1.050000e+4
+        </script>
+        
+        <!--
+        The toFixed() Method
+        
+        toFixed() returns a string, with the number written with a specified number of decimals:
+        
+        Example
+            var x = 9.656;
+            x.toFixed(0);           // returns 10
+            x.toFixed(2);           // returns 9.66
+            x.toFixed(4);           // returns 9.6560
+            x.toFixed(6);           // returns 9.656000
+        
+        toFixed(2) is perfect for working with money.    
+        -->
+        
+        <p>The toFixed() method rounds a number to a given number of digits.</p>
+        <p>For working with money, toFixed(2) is perfect.</p>
+        
+        <p id="demo3"></p>
+        
+        <script>
+        var x = 9.656;
+        document.getElementById("demo3").innerHTML =
+            x.toFixed(0) + "<br>" +
+            x.toFixed(2) + "<br>" +
+            x.toFixed(4) + "<br>" +
+            x.toFixed(6);
+        </script>
  
+        <!--
+        The toPrecision() Method
+        
+        toPrecision() returns a string, with a number written with a specified length:
+        
+        Example
+            var x = 9.656;
+            x.toPrecision();        // returns 9.656
+            x.toPrecision(2);       // returns 9.7
+            x.toPrecision(4);       // returns 9.656
+            x.toPrecision(6);       // returns 9.65600
+        -->
+        
+        <p>The toPrecision() method returns a string, with a number written with a specified length:</p>
+
+        <p id="demo4"></p>
+        
+        <script>
+        var x = 9.656;
+        document.getElementById("demo4").innerHTML = 
+            x.toPrecision() + "<br>" +
+            x.toPrecision(2) + "<br>" +
+            x.toPrecision(4) + "<br>" +
+            x.toPrecision(6);    
+        </script>
+        
+        <!--
+        Converting Variables to Numbers
+        
+        There are 3 JavaScript functions that can be used to convert variables to numbers:
+        
+        The Number() method
+        The parseInt() method
+        The parseFloat() method
+        These methods are not number methods, but global JavaScript methods.
+        -->
+        
+        <!--
+        The Number() Method
+        
+        Number(), can be used to convert JavaScript variables to numbers:
+        
+        Example
+            x = true;
+            Number(x);        // returns 1
+            x = false;     
+            Number(x);        // returns 0
+            x = new Date();
+            Number(x);        // returns 1404568027739
+            x = "10"
+            Number(x);        // returns 10
+            x = "10 20"
+            Number(x);        // returns NaN
+        -->
     </body>
 </html>    
