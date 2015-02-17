@@ -53,12 +53,180 @@
         <p id="demo2"></p>
         
         <script>
-        function funcion2() {
-            document.getElementById("demo2").innerHTML =
-            Math.min(0, 150, 30, 20, -8)+<br>+
-            Math.max(0, 150, 30, 20, -8);
-        }
+            function funcion2() {
+                document.getElementById("demo2").innerHTML =
+                Math.min(0, 150, 30, 20, -8)+"<br>"+
+                Math.max(0, 150, 30, 20, -8);
+            }
         </script>
-                
+        
+        <!--
+        Math.random()
+        
+        Math.random() returns a random number between 0 and 1:
+        
+        Example
+            Math.random();              // returns a random number
+        -->    
+        <p>Math.random() returns a random number betwween 0 and 1.</p>
+
+        <button onclick="funcion3()">Try it</button>
+        
+        <p id="demo3"></p>
+
+        <script>
+            function funcion3() {
+                document.getElementById("demo3").innerHTML = Math.random();
+            }
+        </script>
+        
+        <!--
+        Math.round()
+        
+        Math.round() rounds a number to the nearest integer:
+        
+        Example
+            Math.round(4.7);            // returns 5
+            Math.round(4.4);            // returns 4
+        -->
+        
+        <p>Math.round() rounds a number to its nearest integer.</p>
+
+        <button onclick="funcion4()">Try it</button>
+        
+        <p id="demo4"></p>
+        
+        <script>
+            function funcion4() {
+                document.getElementById("demo4").innerHTML = Math.round(4.4);
+            }
+        </script>
+        
+        <!--
+        Math.ceil()
+        
+        Math.ceil() rounds a number up to the nearest integer:
+        
+        Example
+            Math.ceil(4.4);             // returns 5
+        -->
+        
+        <p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer.</p>
+
+        <button onclick="funcion5()">Try it</button>
+        
+        <p id="demo5"></p>
+        
+        <script>
+            function funcion5() {
+                document.getElementById("demo5").innerHTML = Math.ceil(4.4);
+            }
+        </script>
+        
+        <!--
+        Math.floor()
+        
+        Math.floor() rounds a number down to the nearest integer:
+        
+        Example
+            Math.floor(4.7);            // returns 4
+        -->
+        
+        <p>Math.floor() rounds a number <strong>down</strong> to its nearest integer.</p>
+
+        <button onclick="funcion6()">Try it</button>
+        
+        <p id="demo6"></p>
+        
+        <script>
+            function funcion6() {
+                document.getElementById("demo6").innerHTML = Math.floor(4.7);
+            }
+        </script>
+        
+        <!--
+        Math.floor() and Math.random() can be used together to return a random number 
+        between 0 and 10:
+
+        Example
+            Math.floor(Math.random() * 11);   // returns a random number between 0 and 10
+        -->
+        
+        <p>Math.floor() combined with Math.random() can return random integers.</p>
+
+        <button onclick="funcion7()">Try it</button>
+        
+        <p id="demo7"></p>
+        
+        <script>
+            function funcion7() {
+                document.getElementById("demo7").innerHTML =
+                Math.floor(Math.random() * 11);
+            }
+        </script>
+        
+        
+        <!--
+        Math Constants
+        
+        JavaScript provides 8 mathematical constants that can be accessed with the Math object:
+        
+        Example
+            Math.E;         // returns Euler's number
+            Math.PI         // returns PI
+            Math.SQRT2      // returns the square root of 2
+            Math.SQRT1_2    // returns the square root of 1/2
+            Math.LN2        // returns the natural logarithm of 2
+            Math.LN10       // returns the natural logarithm of 10
+            Math.LOG2E      // returns base 2 logarithm of E
+            Math.LOG10E     // returns base 10 logarithm of E
+        -->
+        
+        <p>Math constants are E, PI, SQR2, SQR1_2, LN2, LN10, LOG2E, LOG10E</p>
+
+        <button onclick="funcion8()">Try it</button>
+        
+        <p id="demo8"></p>
+        
+        <script>
+            function funcion8() {
+                document.getElementById("demo8").innerHTML = 
+                Math.E + "<br>" +
+                Math.PI + "<br>" +
+                Math.SQRT2 + "<br>" +
+                Math.SQRT1_2 + "<br>" +
+                Math.LN2 + "<br>" +
+                Math.LN10 + "<br>" +
+                Math.LOG2E + "<br>" +
+                Math.LOG10E + "<br>";
+            }
+        </script>
+        
+        <!--
+        Math Object Methods
+        
+        Method	        Description
+        
+        abs(x)	        Returns the absolute value of x
+        acos(x)	        Returns the arccosine of x, in radians
+        asin(x)	        Returns the arcsine of x, in radians
+        atan(x)	        Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+        atan2(y,x)	    Returns the arctangent of the quotient of its arguments
+        ceil(x)	        Returns x, rounded upwards to the nearest integer
+        cos(x)	        Returns the cosine of x (x is in radians)
+        exp(x)	        Returns the value of Ex
+        floor(x)	    Returns x, rounded downwards to the nearest integer
+        log(x)	        Returns the natural logarithm (base E) of x
+        max(x,y,z,...,n)	Returns the number with the highest value
+        min(x,y,z,...,n)	Returns the number with the lowest value
+        pow(x,y)	    Returns the value of x to the power of y
+        random()	    Returns a random number between 0 and 1
+        round(x)	    Rounds x to the nearest integer
+        sin(x)	        Returns the sine of x (x is in radians)
+        sqrt(x)	        Returns the square root of x
+        tan(x)	        Returns the tangent of an angle
+        -->
+        
+        <!-- mas metodos matematicos http://www.w3schools.com/jsref/jsref_obj_math.asp -->
     </body>
 </html>    
