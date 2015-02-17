@@ -182,5 +182,116 @@
             x = "10 20"
             Number(x);        // returns NaN
         -->
+        
+        <p>The global JavaScript function Number() converts variables to numbers:</p>
+
+        <p id="demo5"></p>
+        
+        <script>
+        document.getElementById("demo5").innerHTML = 
+            Number(true) + "<br>" + 
+            Number(false) + "<br>" +
+            Number(new Date()) + "<br>" + 
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number("10 6");  
+        </script>
+        
+        <!--
+        The parseInt() Method
+        
+        parseInt() parses a string and returns a whole number. Spaces are allowed. 
+        Only the first number is returned:
+        
+        Example
+            parseInt("10");         // returns 10
+            parseInt("10.33");      // returns 10
+            parseInt("10 20 30");   // returns 10
+            parseInt("10 years");   // returns 10
+            parseInt("years 10");   // returns NaN 
+        
+        If the number cannot be converted, NaN (Not a Number) is returned.    
+        -->
+        
+        <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+
+        <p id="demo6"></p>
+        
+        <script>
+        document.getElementById("demo6").innerHTML = 
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 20 30") + "<br>" +    
+            parseInt("10 years") + "<br>" +    
+            parseInt("years 10");    
+        </script>
+        
+        <!--
+        The parseFloat() Method
+        
+        parseFloat() parses a string and returns a number. Spaces are allowed. 
+        Only the first number is returned:
+        
+        Example
+            parseFloat("10");        // returns 10
+            parseFloat("10.33");     // returns 10.33
+            parseFloat("10 20 30");  // returns 10
+            parseFloat("10 years");  // returns 10
+            parseFloat("years 10");  // returns NaN
+            
+        If the number cannot be converted, NaN (Not a Number) is returned.    
+        -->
+        
+        <p>The global JavaScript function parseFloat() converts strings to numbers:</p>
+
+        <p id="demo7"></p>
+        
+        <script>
+        document.getElementById("demo7").innerHTML = 
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 20 30") + "<br>" +    
+            parseFloat("10 years") + "<br>" +
+            parseFloat("years 10");        
+        </script>
+        
+        <!--
+        The valueOf() Method
+        
+        valueOf() returns a number as a number.
+        
+        Example
+            var x = 123;
+            x.valueOf();            // returns 123 from variable x
+            (123).valueOf();        // returns 123 from literal 123
+            (100 + 23).valueOf();   // returns 123 from expression 100 + 23
+        -->
+        <p id="demo8"></p>
+
+        <script>
+        var x = 123;
+        
+        document.getElementById("demo8").innerHTML = 
+            x.valueOf() + "<br>" +
+            (123).valueOf() + "<br>" +
+            (100 + 23).valueOf();
+        </script>
+        <!--
+        In JavaScript, a number can be a primitive value (typeof = number) 
+        or an object (typeof = object).
+
+        The valueOf() method is used internally in JavaScript to convert Number objects 
+        to primitive values.
+        
+        There is no reason to use it in your code.
+        -->
+        
+        <!-- CONSEJO
+        In JavaScript, all data types have a valueOf() and a toString() method.
+        -->
+        
+        <!--
+        MAS INFORMACION Y EJEMPLOS http://www.w3schools.com/jsref/jsref_obj_number.asp
+        -->
     </body>
 </html>    
