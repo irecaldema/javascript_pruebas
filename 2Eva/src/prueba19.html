@@ -36,6 +36,260 @@
                 document.getElementById("demo").innerHTML = d.getTime();
             </script>
         -->
- 
+        
+        <p>The internal clock in JavaScript starts at midnight January 1, 1970.</p>
+        <p>The getTime() function returns the number of milliseconds since then:</p>
+        
+        <p id="demo1"></p>
+        
+        <script>
+            var d = new Date();
+            document.getElementById("demo1").innerHTML = d.getTime();
+            //1424342748472
+        </script>
+        
+        <!--
+        The getFullYear() Method
+        
+        getFullYear() returns the year of a date as a four digit number:
+        
+        Example
+            <script>
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d.getFullYear();
+            </script>
+        -->
+        
+        <p>The getFullYear() method returns the full year of a date:</p>
+
+        <p id="demo2"></p>
+        
+        <script>
+            var d = new Date();
+            document.getElementById("demo2").innerHTML = d.getFullYear();
+            //2015
+        </script>
+        
+        <!--
+        The getDay() Method
+        getDay() returns the weekday as a number (0-6):
+        
+        Example
+            <script>
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d.getDay();
+            </script>
+        -->
+        
+        <p>The getDay() method returns the weekday as a number:</p>
+
+        <p id="demo3"></p>
+        
+        <script>
+            var d = new Date();
+            document.getElementById("demo3").innerHTML = d.getDay();
+            //4
+        </script>
+        
+        <!--
+        You can use an array of names, and getDay() to return the weekday as a name:
+
+        Example
+            <script>
+                var d = new Date();
+                var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                document.getElementById("demo").innerHTML = days[d.getDay()];
+            </script>
+        -->
+        
+        <p>You can use an array to display the name of the weekday:</p>
+
+        <p id="demo4"></p>
+        
+        <script>
+            var d = new Date();
+            var days = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
+            document.getElementById("demo4").innerHTML = days[d.getDay()];
+            //Jueves
+        </script>
+        
+        <!--
+        Date Set Methods
+        
+        Set methods are used for setting a part of a date. Here are the most common (alphabitically):
+        
+        Method	            Description
+        
+        setDate()	        Set the day as a number (1-31)
+        setFullYear()	    Set the year (optionally month and day yyyy.mm.dd)
+        setHours()	        Set the hour (0-23)
+        setMilliseconds()	Set the milliseconds (0-999)
+        setMinutes()	    Set the minutes (0-59)
+        setMonth()	        Set the month (0-11)
+        setSeconds()	    Set the seconds (0-59)
+        setTime()	        Set the time (milliseconds since January 1, 1970)
+        -->
+        
+        <!--
+        The setFullYear() Method
+        
+        setFullYear() sets a date object to a specific date. In this example, to January 14, 2020:
+        
+        Example
+            <script>
+                var d = new Date();
+                d.setFullYear(2020, 0, 14);
+                document.getElementById("demo").innerHTML = d;
+            </script>
+        -->
+        
+        <p>The setFullYear() method sets a date object to a special date.</p>
+
+        <p>Remember that JavaScript counts months from 0 to 11. Month 10 is November.</p>
+        
+        <p id="demo5"></p>
+        
+        <script>
+            var d = new Date();
+            d.setFullYear(2020, 0, 14);
+            document.getElementById("demo5").innerHTML = d;
+            //Tue Jan 14 2020 11:52:33 GMT+0100 (Hora estándar romance)
+        </script>
+        
+        <!--
+        The setDate() Method
+        
+        setDate() sets the day of the month (1-31):
+        
+        Example
+            <script>
+                var d = new Date();
+                d.setDate(20);
+                document.getElementById("demo").innerHTML = d;
+            </script>
+        -->
+        
+        <p>The setDate() method sets the date of a month.</p>
+
+        <p id="demo6"></p>
+        
+        <script>
+            var d = new Date();
+            d.setDate(15);
+            document.getElementById("demo6").innerHTML = d;
+            //Sun Feb 15 2015 11:56:32 GMT+0100 (Hora estándar romance)
+        </script>
+        
+        <!--
+        The setDate() method can also be used to add days to a date:
+
+        Example
+            <script>
+                var d = new Date();
+                d.setDate(d.getDate() + 50);
+                document.getElementById("demo").innerHTML = d;
+            </script>
+            
+        If adding days, shifts the month or year, the changes are handled automatically 
+        by the Date object.    
+        -->
+        
+        <p>The setDate() method can be used to add days to a date.</p>
+
+        <p id="demo7"></p>
+        
+        <script>
+            var d = new Date();
+            d.setDate(d.getDate() + 50);
+            document.getElementById("demo7").innerHTML = d;
+            //Fri Apr 10 2015 11:57:12 GMT+0200 (Hora de verano romance)
+        </script>
+        
+        <!--
+        Date Input - Parsing Dates
+        
+        If you have an input value (or any string), you can use the Date.parse() method 
+        to convert it to milliseconds.
+        
+        Date.parse() returns the number of milliseconds between the date and January 1, 1970:
+        
+        Example
+            <script>
+                var msec = Date.parse("March 21, 2012");
+                document.getElementById("demo").innerHTML = msec;
+            </script>
+        -->
+        
+        <p>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</p>
+
+        <p id="demo8"></p>
+        
+        <script>
+            var msec = Date.parse("March 21, 2012");
+            //1332284400000
+            document.getElementById("demo8").innerHTML = msec;
+        </script>
+        
+        <!--
+        You can then use the number of milliseconds to convert it to a date object:
+
+        Example
+            <script>
+                var msec = Date.parse("March 21, 2012");
+                var d = new Date(msec);
+                document.getElementById("demo").innerHTML = d;
+            </script>
+        -->
+        
+        <p>Date.parse(string) returns milliseconds.</p>
+        <p>You can use the return value to convert the string to a date object:</p>
+        
+        <p id="demo9"></p>
+        
+        <script>
+            var msec = Date.parse("March 21, 2012");
+            var d = new Date(msec);
+            document.getElementById("demo9").innerHTML = d;
+        </script>
+        
+        <!--
+        Compare Dates
+        
+        Dates can easily be compared.
+        
+        The following example compares today's date with January 14, 2100:
+        
+        Example
+            var today, someday, text;
+            today = new Date();
+            someday = new Date();
+            someday.setFullYear(2100, 0, 14);
+            
+            if (someday > today) {
+                text = "Today is before January 14, 2100.";
+            } else {
+                text = "Today is after January 14, 2100.";
+            }
+            document.getElementById("demo").innerHTML = text;
+            
+        JavaScript counts months from 0 to 11. January is 0. December is 11.    
+        -->
+        
+        <p id="demo10"></p>
+
+        <script>
+            var today, someday, text;
+            today = new Date();
+            someday = new Date();
+            someday.setFullYear(2100, 0, 14);
+            
+            if (someday > today) {
+                text = "Today is before January 14, 2100.";
+            } else {
+                text = "Today is after January 14, 2100.";
+            }
+            document.getElementById("demo10").innerHTML = text;
+        </script>
+        
     </body>
 </html>    
