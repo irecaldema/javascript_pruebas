@@ -126,7 +126,7 @@
             document.getElementById("demo5").innerHTML = fruits;
             
             function funcion5() {
-                fruits.push("Kiwi")
+                fruits.push("Kiwi");
                 document.getElementById("demo5").innerHTML = fruits;
             }
         </script>
@@ -143,5 +143,448 @@
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.shift();            // Removes the first element "Banana" from fruits
         -->
+        
+        <p>The shift method removes (shifts) the first element of an array.</p>
+
+        <button onclick="funcion6()">Try it</button>
+        
+        <p id="demo6"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo6").innerHTML = fruits;
+            
+            function funcion6() {
+                fruits.shift();
+                document.getElementById("demo6").innerHTML = fruits;
+            }
+        </script>
+        
+        <!--
+        The unshift() method adds a new element to an array (at the beginning), 
+        and "unshifts" older elements:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+        -->
+        
+        <p>The unshift method adds new elements to the beginning of an array.</p>
+
+        <button onclick="funcion7()">Try it</button>
+        
+        <p id="demo7"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo7").innerHTML = fruits;
+            
+            function funcion7() {
+                fruits.unshift("Lemon");
+                document.getElementById("demo7").innerHTML = fruits;
+            }
+        </script>
+        
+        <p>
+            <b>Note:</b> The unshift() method does not work properly in Internet Explorer 8 and earlier, the values will be inserted, but the return value will be <em>undefined</em>.
+        </p>
+        
+        <!--
+            The shift() method returns the string that was "shifted out".
+            The unshift() method returns the new array length.
+        -->
+        
+        <!--
+        Changing Elements
+        
+        Array elements are accessed using their index number:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[0] = "Kiwi";        // Changes the first element of fruits to "Kiwi"
+        -->
+        
+        <p>Array elements are accessed using their index number.</p>
+
+        <button onclick="funcion8()">Try it</button>
+        
+        <p id="demo8"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo8").innerHTML = fruits;
+            
+            function funcion8() {
+                fruits[0] = "Kiwi";
+                document.getElementById("demo8").innerHTML = fruits;
+            }
+        </script>
+        
+        <!--
+        The length property provides an easy way to append a new element to an array:
+
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[fruits.length] = "Kiwi";          // Appends "Kiwi" to fruit
+        -->
+        
+        <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+        <button onclick="funcion9()">Try it</button>
+        
+        <p id="demo9"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo9").innerHTML = fruits;
+            
+            function funcion9() {
+                fruits[fruits.length] = "Kiwi";
+                document.getElementById("demo9").innerHTML = fruits;
+            }
+        </script>
+        
+        <!--
+        Deleting Elements
+        
+        Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            delete fruits[0];           // Changes the first element in fruits to undefined
+            
+        Using delete on array elements leaves undefined holes in the array. Use pop() or splice() instead.
+        -->
+        
+        <p>Deleting elements leaves undefined holes in an array.</p>
+
+        <button onclick="funcion10()">Try it</button>
+        
+        <p id="demo10"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo10").innerHTML = fruits;
+            
+            function funcion10() {
+                delete fruits[0];
+                document.getElementById("demo10").innerHTML = fruits[0];
+            }
+        </script>
+        
+        <!--
+        Splicing an Array
+        
+        The splice() method can be used to add new items to an array:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.splice(2, 0, "Lemon", "Kiwi");
+            
+        The first parameter (2) defines the position where new elements should be added (spliced in).
+
+        The second parameter (0) defines how many elements should be removed.
+        
+        The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.    
+        -->
+        
+        <p>The splice() method adds new elements to an array.</p>
+
+        <button onclick="funcion11()">Try it</button>
+        
+        <p id="demo11"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo11").innerHTML = fruits;
+            function funcion11() {
+                fruits.splice(2, 0, "Lemon", "Kiwi");
+                document.getElementById("demo11").innerHTML = fruits;
+            }
+        </script>
+        
+        <!--
+        Using splice() to Remove Elements
+        
+        With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.splice(0,1);        // Removes the first element of fruits
+            
+        The first parameter (0) defines the position where new elements should be added (spliced in).
+
+        The second parameter (1) defines how many elements should be removed.
+        
+        The rest of the parameters are omitted. No new elements will be added.    
+        -->
+        
+        <p>The splice() methods can be used to remove array elements.</p>
+
+        <button onclick="funcion12()">Try it</button>
+        
+        <p id="demo12"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo12").innerHTML = fruits;
+            function funcion12() {
+                fruits.splice(0, 1);
+                document.getElementById("demo12").innerHTML = fruits;
+            }
+        </script>
+        
+        <!--
+        Sorting an Array
+        
+        The sort() method sorts an array alphabetically:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.sort();            // Sorts the elements of fruits
+        -->
+        
+        <p>The sort() method sorts an array alphabetically.</p>
+
+        <button onclick="funcion13()">Try it</button>
+        
+        <p id="demo13"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo13").innerHTML = fruits;
+            
+            function funcion13() {
+                fruits.sort();
+                document.getElementById("demo13").innerHTML = fruits;
+                //Apple,Banana,Mango,Orange
+            }
+        </script>
+        
+        <!--
+        Reversing an Array
+        
+        The reverse() method reverses the elements in an array.
+        
+        You can use it to sort an array in descending order:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.sort();            // Sorts the elements of fruits 
+            fruits.reverse();         // Reverses the order of the elements
+        -->
+        
+        <p>The sort() method sorts an array alphabetically.</p>
+
+        <button onclick="funcion14()">Try it</button>
+        
+        <p id="demo14"></p>
+        
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo14").innerHTML = fruits;
+            
+            function funcion14() {
+                fruits.sort();
+                fruits.reverse();
+                document.getElementById("demo14").innerHTML = fruits;
+                //Orange,Mango,Banana,Apple
+            }
+        </script>
+        
+        <!--
+        Numeric Sort
+        
+        By default, the sort() function sorts values as strings.
+        
+        This works well for strings ("Apple" comes before "Banana").
+        
+        However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+        
+        Because of this, the sort() method will produce incorrect result when sorting numbers.
+        
+        You can fix this by providing a compare function:
+        
+        Example
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return a-b});
+        -->
+        
+        <p>Click the button to sort the array in ascending order.</p>
+
+        <button onclick="funcion15()">Try it</button>
+        
+        <p id="demo15"></p>
+        
+        <script>
+            var points = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo15").innerHTML = points;    
+            
+            function funcion15() {
+                points.sort(function(a, b){return a-b});
+                document.getElementById("demo15").innerHTML = points;
+                //1,5,10,25,40,100
+            }
+        </script>
+        
+        <!--
+        Use the same trick to sort an array descending:
+
+        Example
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return b-a});
+        -->
+        
+        <p>Click the button to sort the array in descending order.</p>
+
+        <button onclick="funcion16()">Try it</button>
+        
+        <p id="demo16"></p>
+        
+        <script>
+            var points = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo16").innerHTML = points;
+            
+            function funcion16() {
+                points.sort(function(a, b){return b-a});
+                document.getElementById("demo16").innerHTML = points;
+                //100,40,25,10,5,1
+            }
+        </script>
+        
+        <!--
+        The Compare Function
+        
+        The purpose of the compare function is to define an alternative sort order.
+        
+        The compare function should return a negative, zero, or positive value, depending on the arguments:
+            function(a, b){return a-b}
+            
+        When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+        
+        Example:
+        
+        When comparing 40 and 100, the sort() method calls the compare function(40,100).
+        
+        The function calculates 40-100, and returns -60 (a negative value).
+        
+        The sort function will sort 40 as a value lower than 100.
+        -->
+        
+        <!--
+        Find the Highest (or Lowest) Value
+        
+        How to find the highest value in an array?
+        
+        Example
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return b-a});
+            // now points[0] contains the highest value
+        -->
+        
+        <p>The highest number is <span id="demo17"></span></p>
+
+        <script>
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return b-a});
+            document.getElementById("demo17").innerHTML = points[0];
+            //100
+        </script>
+        
+        <!--
+        And the lowest:
+
+        Example
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return a-b});
+            // now points[0] contains the lowest value
+        -->
+        
+        <p>The lowest number is <span id="demo18"></span></p>
+
+        <script>
+            var points = [40, 100, 1, 5, 25, 10];
+            points.sort(function(a, b){return a-b});
+            document.getElementById("demo18").innerHTML = points[0];
+        </script>
+        
+        <!--
+        Joining Arrays
+        
+        The concat() method creates a new array by concatenating two arrays:
+        
+        Example
+            var myGirls = ["Cecilie", "Lone"];
+            var myBoys = ["Emil", "Tobias","Linus"];
+            var myChildren = myGirls.concat(myBoys);     // Concatenates (joins) myGirls and myBoys
+        -->
+        
+        <p>Click "Try it" to display all my children:</p>
+
+        <button onclick="funcion19()">Try it</button>
+        
+        <p id="demo19"></p>
+        
+        <script>
+            function funcion19() {
+                var myGirls = ["Cecilie", "Lone"];
+                var myBoys = ["Emil", "Tobias", "Linus"];
+                var myChildren = myGirls.concat(myBoys);
+                document.getElementById("demo19").innerHTML = myChildren;
+                //Cecilie,Lone,Emil,Tobias,Linus
+            }
+        </script>
+        
+        <!--
+        The concat() method can take any number of array arguments:
+
+        Example
+            var arr1 = ["Cecilie", "Lone"];
+            var arr2 = ["Emil", "Tobias","Linus"];
+            var arr3 = ["Robin", "Morgan"];
+            var myChildren = arr1.concat(arr2, arr3);     // Concatenates arr1 with arr2 and arr3
+        -->
+        
+        <p>Click the button to join three arrays.</p>
+
+        <button onclick="funcion20()">Try it</button>
+        
+        <p id="demo20"></p>
+        
+        <script>
+            function funcion20() {
+                var arr1 = ["Cecilie", "Lone"];
+                var arr2 = ["Emil", "Tobias", "Linus"];
+                var arr3 = ["Robin", "Morgan"];
+                document.getElementById("demo20").innerHTML =
+                arr1.concat(arr2, arr3);
+                //Cecilie,Lone,Emil,Tobias,Linus,Robin,Morgan
+            }
+        </script>
+        
+        <!--
+        Slicing an Array
+        
+        The slice() method slices out a piece of an array:
+        
+        Example
+            var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus = fruits.slice(1, 3);
+        -->
+        
+        <p>The slice() method slices elements from an array.</p>
+
+        <button onclick="funcion21()">Try it</button>
+        
+        <p id="demo21"></p>
+        
+        <script>
+            function funcion21() {
+                var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                var citrus = fruits.slice(1,3);
+                document.getElementById("demo21").innerHTML = citrus;
+            }
+        </script>
+        
     </body>
 </html>    
